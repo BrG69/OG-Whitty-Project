@@ -95,6 +95,43 @@ class Character extends FlxSprite
 				barColor = 0xFFaf66ce;
 
 				playAnim('idle');
+				case 'whitty':
+				tex = Paths.getSparrowAtlas('WhittySprites', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Sing Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFF735F96;
+
+				playAnim('idle');
+				case 'whittyCrazy':
+				tex = Paths.getSparrowAtlas('WhittyCrazy', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Whitty idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Whitty Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'whitty sing note right', 24, false);
+				animation.addByPrefix('singDOWN', 'Whitty Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Whitty Sing Note LEFT', 24, false);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFFF004B;
+
+				playAnim('idle');
+				case 'gf-sway':
+				tex = Paths.getSparrowAtlas('GF_Standing_Sway', 'shared', true);
+				frames = tex;
+				animation.addByIndices('sad', Sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'Idle Left', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Idle Right', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'Scared', 24);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets', 'shared', true);
 				frames = tex;
