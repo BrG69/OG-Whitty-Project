@@ -54,6 +54,18 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
+case 'gf-sway':
+				tex = Paths.getSparrowAtlas('GF_Standing_Sway', 'shared', true);
+				frames = tex;
+				animation.addByIndices('sad', Sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'Idle Left', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Idle Right', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'Scared', 24);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
+
 			case 'gf-car':
 				tex = Paths.getSparrowAtlas('gfCar', 'shared', true);
 				frames = tex;
@@ -121,17 +133,6 @@ class Character extends FlxSprite
 				barColor = 0xFFFF004B;
 
 				playAnim('idle');
-				case 'gf-sway':
-				tex = Paths.getSparrowAtlas('GF_Standing_Sway', 'shared', true);
-				frames = tex;
-				animation.addByIndices('sad', Sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
-				animation.addByIndices('danceLeft', 'Idle Left', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-				animation.addByIndices('danceRight', 'Idle Right', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-				animation.addByPrefix('scared', 'Scared', 24);
-
-				loadOffsetFile(curCharacter);
-
-				playAnim('danceRight');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets', 'shared', true);
 				frames = tex;
